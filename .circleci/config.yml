@@ -14,7 +14,7 @@ commands:
       - run:
           name: apt update
           command: |
-              sudo apt-key list | grep "expired:"
+              sudo apt-key list
 #              sudo apt update
 jobs:
   run_integration_test:
