@@ -14,7 +14,7 @@ commands:
       - run:
           name: apt update
           command: |
-              sudo apt-key list
+              sudo apt-key list | grep "pub"
 #              sudo apt update
 jobs:
   run_integration_test:
