@@ -3,7 +3,7 @@ version: 2.1
 executors:
   integration_executor:
     machine:
-      image: ubuntu-1604:201903-01
+      image: ubuntu-1604:202004-01
     environment:
       PYENV_VERSION: 3.7.0
 
@@ -14,8 +14,6 @@ commands:
       - run:
           name: apt update
           command: |
-              wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-              wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
               sudo apt update
 
 jobs:
