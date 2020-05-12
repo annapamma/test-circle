@@ -14,10 +14,8 @@ commands:
       - run:
           name: apt update
           command: |
-              sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 5DC22404A6F9F1CA
               sudo apt update
-              sudo apt install -y libmysqlclient-dev
-
+              sudo apt-key list | grep "expired:"
 jobs: 
   run_integration_test:
     executor: integration_executor
