@@ -14,8 +14,9 @@ commands:
       - run:
           name: apt update
           command: |
-              sudo apt-key list | grep "pub"
+#              sudo apt-key list | grep "pub"
 #              sudo apt update
+              wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 jobs:
   run_integration_test:
     executor: integration_executor
