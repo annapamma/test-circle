@@ -14,8 +14,7 @@ commands:
       - run:
           name: apt update
           command: |
-              wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-              sudo apt update
+              sudo apt-get update
 
 jobs:
   run_integration_test:
